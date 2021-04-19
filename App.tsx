@@ -27,6 +27,8 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import Config from 'react-native-config';
+
 const Section: React.FC<{
   title: string;
 }> = ({children, title}) => {
@@ -74,8 +76,8 @@ const App = () => {
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
           <Section title="Step One">
-            Cuity Edit <Text style={styles.highlight}>App.js</Text> to change
-            this screen and then come back to see your edits.
+            Cuity Edit <Text style={styles.highlight}>{Config.API_URL}</Text> to
+            change this screen and then come back to see your edits.
           </Section>
           <Section title="See Your Changes">
             <ReloadInstructions />
